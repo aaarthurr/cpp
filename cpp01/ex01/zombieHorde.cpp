@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/08 22:37:49 by arthur            #+#    #+#             */
-/*   Updated: 2024/06/14 14:13:16 by arpages          ###   ########.fr       */
+/*   Created: 2024/06/14 15:16:05 by arpages           #+#    #+#             */
+/*   Updated: 2024/06/14 15:40:31 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-
-class PhoneBook
+Zombie*  zombieHorde ( int N, std::string name)
 {
-private:
-    Contact     _contacts[8];
-    int         _readInput(void) const;
-public:
-    PhoneBook();
-    ~PhoneBook();
-    void    addContact(void);
-    void    printContacts(void) const;
-    void    search(void) const;
-    void    welcome(void) const;
-};
-
-#endif // PHONEBOOK_HPP
+    if (N <= 0)
+    {
+        std::cout << "No Zombie, No problem" << std::endl;
+        return (NULL);
+    }
+    Zombie *horde = new Zombie[N];
+    for (int i = 0; i < N; i++) {
+        horde[i].setName(name);
+        std::cout << name << " joined the horde" << std::endl;
+    }
+    return (horde);
+}

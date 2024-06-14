@@ -5,25 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/08 16:09:11 by arthur            #+#    #+#              #
-#    Updated: 2024/06/14 15:08:39 by arpages          ###   ########.fr        #
+#    Created: 2024/06/14 16:48:54 by arpages           #+#    #+#              #
+#    Updated: 2024/06/14 16:52:21 by arpages          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-NAME		= PhoneBook
+NAME	= HiBrain
 	
-CC			= c++
-FLAGS		= -Wall -Wextra -Werror -std=c++98
-RM			= rm -rf
-
-OBJDIR = .objFiles
-
-FILES		= main Contact PhoneBook
-
-SRC			= $(FILES:=.cpp)
-OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Contact.hpp PhoneBook.hpp
+CC		= c++
+FLAGS	= -Wall -Wextra -Werror -std=c++98
+RM		= rm -rf
 
 #Colors:
 CLR_END		:= \033[0m
@@ -33,34 +24,27 @@ YELLOW		:= \033[24;33m
 BLUE		:= \033[1;34m
 CYAN 		:= \033[1;36m
 
+#ascii name: big
 BANNER = \n\
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ \n\
-┃   _____ _____  _____     ___   ___   ┃ \n\
-┃  / ____|  __ \|  __ \   / _ \ / _ \  ┃ \n\
-┃ | |    | |__) | |__) | | | | | | | | ┃ \n\
-┃ | |    |  ___/|  ___/  | | | | | | | ┃ \n\
-┃ | |____| |    | |      | |_| | |_| | ┃ \n\
-┃  \_____|_|  __|_| ___   \___/ \___/  ┃ \n\
+┃      _____ _____  _____   ___  __    ┃ \n\
+┃     / ____|  __ \|  __ \ / _ \/_ |   ┃ \n\
+┃    | |    | |__) | |__) | | | || |   ┃ \n\
+┃    | |    |  ___/|  ___/| | | || |   ┃ \n\
+┃    | |____| |    | |    | |_| || |   ┃ \n\
+┃     \_____|_|    |_|     \___/ |_|   ┃ \n\
 ┃                                      ┃ \n\
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ \n\
 :                EX 01                 : \n\
-
-
-ifeq ($(DEBUG), 1)
-   OPTS = -g
-endif
 
 .PHONY: all clean re
 
 all: $(NAME)
 
-$(NAME):print $(OBJ) $(HEADER)
-	@$(CC) $(OBJ) $(OPTS) -o $(NAME)
-	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
-
-$(OBJDIR)/%.o: %.cpp $(HEADER)
-	@mkdir -p $(dir $@)
-	@$(CC) $(FLAGS) $(OPTS) -c $< -o $@
+$(NAME): print
+	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
+	@ $(CC) $(FLAGS) main.cpp -o $(NAME)
+	@printf "$(GREEN)    - Executable ready.\n$(RESET)"
 
 clean:
 	@$(RM) $(NAME)

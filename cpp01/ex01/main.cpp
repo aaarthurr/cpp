@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/08 22:37:49 by arthur            #+#    #+#             */
-/*   Updated: 2024/06/14 14:13:16 by arpages          ###   ########.fr       */
+/*   Created: 2024/06/14 15:14:47 by arpages           #+#    #+#             */
+/*   Updated: 2024/06/14 16:36:46 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-
-class PhoneBook
+int main(void)
 {
-private:
-    Contact     _contacts[8];
-    int         _readInput(void) const;
-public:
-    PhoneBook();
-    ~PhoneBook();
-    void    addContact(void);
-    void    printContacts(void) const;
-    void    search(void) const;
-    void    welcome(void) const;
-};
-
-#endif // PHONEBOOK_HPP
+    //une horde de 10 zombies
+    Zombie *horde1 = zombieHorde(10, "Dave");
+    for (int i = 0; i < 10; i++)
+    {
+        horde1[i].announce();
+    }
+    //une horde vide
+    Zombie *horde2 = zombieHorde(0, "jasin");
+    //une horde 1...
+    horde2 = zombieHorde(1, "Summer");
+    horde2[0].announce();
+    delete [] horde1;
+    delete [] horde2;
+}

@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/08 22:37:49 by arthur            #+#    #+#             */
-/*   Updated: 2024/06/14 14:13:16 by arpages          ###   ########.fr       */
+/*   Created: 2024/06/14 14:30:16 by arpages           #+#    #+#             */
+/*   Updated: 2024/06/14 14:56:43 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-
-class PhoneBook
+int main(void)
 {
-private:
-    Contact     _contacts[8];
-    int         _readInput(void) const;
-public:
-    PhoneBook();
-    ~PhoneBook();
-    void    addContact(void);
-    void    printContacts(void) const;
-    void    search(void) const;
-    void    welcome(void) const;
-};
-
-#endif // PHONEBOOK_HPP
+    Zombie *julius;
+    Zombie *kim;
+    julius = newZombie("Julius");
+    julius->announce();
+    kim = newZombie("Kim");
+    kim->announce();
+    randomChump("Ether");
+    delete julius;
+    delete kim;
+}
