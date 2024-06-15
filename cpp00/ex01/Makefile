@@ -6,7 +6,7 @@
 #    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/08 16:09:11 by arthur            #+#    #+#              #
-#    Updated: 2024/06/14 15:08:39 by arpages          ###   ########.fr        #
+#    Updated: 2024/06/15 12:32:54 by arpages          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,9 +66,9 @@ clean:
 	@$(RM) $(NAME)
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
-fclean:
-	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+fclean: clean
+	@$(RM) $(objFiles)
+	@printf "$(YELLOW)    - Objects removed.$(RESET)\n"
 
 re: clean all
 

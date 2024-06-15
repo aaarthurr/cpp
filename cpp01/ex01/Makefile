@@ -6,11 +6,11 @@
 #    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/14 16:51:04 by arpages          ###   ########.fr        #
+#    Updated: 2024/06/15 12:37:21 by arpages          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Zombies
+NAME		= Horde
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -67,9 +67,9 @@ clean:
 	@$(RM) $(NAME)
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
-fclean:
-	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+fclean: clean
+	@$(RM) $(objFiles)
+	@printf "$(YELLOW)    - Objects removed.$(RESET)\n"
 
 re: clean all
 
