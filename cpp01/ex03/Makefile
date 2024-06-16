@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
+#    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/15 13:51:44 by arpages          ###   ########.fr        #
+#    Updated: 2024/06/16 13:57:09 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,9 +66,9 @@ $(OBJDIR)/%.o: %.cpp $(HEADER)
 clean:
 	@$(RM) $(NAME)
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
-
+	
 fclean: clean
-	@$(RM) $(objFiles)
+	@$(RM) $(OBJDIR)
 	@printf "$(YELLOW)    - Objects removed.$(RESET)\n"
 
 re: clean all

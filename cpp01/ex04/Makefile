@@ -3,26 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
+#    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/15 13:51:59 by arpages          ###   ########.fr        #
+#    Updated: 2024/06/16 14:07:22 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Sed
+NAME	= Sed
 	
-CC			= c++
-FLAGS		= -Wall -Wextra -Werror -std=c++98
-RM			= rm -rf
-
-OBJDIR = .objFiles
-
-FILES		= main HumanA HumanB Weapon
-
-SRC			= $(FILES:=.cpp)
-OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= HumanA.hpp HumanB.hpp Weapon.hpp
+CC		= c++
+FLAGS	= -Wall -Wextra -Werror -std=c++98
+RM		= rm -rf
 
 #Colors:
 CLR_END		:= \033[0m
@@ -31,7 +23,6 @@ GREEN		:= \033[1;32m
 YELLOW		:= \033[24;33m
 BLUE		:= \033[1;34m
 CYAN 		:= \033[1;36m
-
 
 #ascii name: big
 BANNER = \n\
@@ -44,32 +35,24 @@ BANNER = \n\
 ┃     \_____|_|    |_|     \___/ |_|   ┃ \n\
 ┃                                      ┃ \n\
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ \n\
-:                EX 03                 : \n\
-
-
-ifeq ($(DEBUG), 1)
-   OPTS = -g
-endif
+:                EX 04                 : \n\
 
 .PHONY: all clean re
 
 all: $(NAME)
 
-$(NAME):print $(OBJ) $(HEADER)
-	@$(CC) $(OBJ) $(OPTS) -o $(NAME)
-	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
-
-$(OBJDIR)/%.o: %.cpp $(HEADER)
-	@mkdir -p $(dir $@)
-	@$(CC) $(FLAGS) $(OPTS) -c $< -o $@
+$(NAME): print
+	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
+	@ $(CC) $(FLAGS) main.cpp -o $(NAME)
+	@printf "$(GREEN)    - Executable ready.\n$(RESET)"
 
 clean:
 	@$(RM) $(NAME)
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
-fclean: clean
-	@$(RM) $(objFiles)
-	@printf "$(YELLOW)    - Objects removed.$(RESET)\n"
+fclean:
+	@$(RM) $(NAME)
+	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
 re: clean all
 

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
+#    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/15 12:33:06 by arpages          ###   ########.fr        #
+#    Updated: 2024/06/16 13:56:04 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ ifeq ($(DEBUG), 1)
    OPTS = -g
 endif
 
-.PHONY: all clean re
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
@@ -68,7 +68,7 @@ clean:
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
 fclean: clean
-	@$(RM) $(objFiles)
+	@$(RM) $(OBJDIR)
 	@printf "$(YELLOW)    - Objects removed.$(RESET)\n"
 
 re: clean all

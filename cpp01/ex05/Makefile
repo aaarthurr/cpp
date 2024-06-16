@@ -6,11 +6,11 @@
 #    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/16 13:56:49 by arthur           ###   ########.fr        #
+#    Updated: 2024/06/16 15:03:38 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Horde
+NAME		= Harl
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Zombie zombieHorde
+FILES		= main Harl
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Zombie.hpp
+HEADER		= Harl.hpp
 
 #Colors:
 CLR_END		:= \033[0m
@@ -44,7 +44,7 @@ BANNER = \n\
 ┃     \_____|_|    |_|     \___/ |_|   ┃ \n\
 ┃                                      ┃ \n\
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ \n\
-:                EX 01                 : \n\
+:                EX 05                 : \n\
 
 
 ifeq ($(DEBUG), 1)
@@ -66,6 +66,7 @@ $(OBJDIR)/%.o: %.cpp $(HEADER)
 clean:
 	@$(RM) $(NAME)
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+	
 fclean: clean
 	@$(RM) $(OBJDIR)
 	@printf "$(YELLOW)    - Objects removed.$(RESET)\n"

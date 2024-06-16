@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
+#    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/08 16:09:11 by arthur            #+#    #+#              #
-#    Updated: 2024/06/15 12:32:54 by arpages          ###   ########.fr        #
+#    Updated: 2024/06/16 13:56:27 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,7 @@ clean:
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
 fclean: clean
-	@$(RM) $(objFiles)
+	@$(RM) $(OBJDIR)
 	@printf "$(YELLOW)    - Objects removed.$(RESET)\n"
 
 re: clean all
