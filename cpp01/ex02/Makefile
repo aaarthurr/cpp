@@ -6,7 +6,7 @@
 #    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 16:48:54 by arpages           #+#    #+#              #
-#    Updated: 2024/06/15 12:31:21 by arpages          ###   ########.fr        #
+#    Updated: 2024/06/16 15:48:56 by arpages          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ FLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
 
 #Colors:
-CLR_END		:= \033[0m
+RESET		:= \033[0m
 RED		    := \033[1;5;31m
 GREEN		:= \033[1;32m
 YELLOW		:= \033[24;33m

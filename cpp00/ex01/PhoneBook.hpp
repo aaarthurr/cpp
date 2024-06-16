@@ -6,7 +6,7 @@
 /*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 22:37:49 by arthur            #+#    #+#             */
-/*   Updated: 2024/06/14 14:13:16 by arpages          ###   ########.fr       */
+/*   Updated: 2024/06/16 15:54:25 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     void    addContact(void);
     void    printContacts(void) const;
     void    search(void) const;
-    void    welcome(void) const;
+    void    info(void) const;
 };
 
 #endif // PHONEBOOK_HPP
