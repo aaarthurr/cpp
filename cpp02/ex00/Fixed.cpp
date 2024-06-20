@@ -6,7 +6,7 @@
 /*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:56:42 by arpages           #+#    #+#             */
-/*   Updated: 2024/06/18 13:48:52 by arpages          ###   ########.fr       */
+/*   Updated: 2024/06/20 15:11:58 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ Fixed::Fixed(/* args */) :rawBits(0)
 Fixed::Fixed( const Fixed &copy )  {
     std::cout << "Copy constructor called" << std::endl;
     this->rawBits = copy.getRawBits();
-    // *this = rhs;
 }
 
 Fixed::~Fixed()
