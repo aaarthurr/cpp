@@ -6,11 +6,11 @@
 #    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/20 19:51:06 by arthur           ###   ########.fr        #
+#    Updated: 2024/06/20 20:18:16 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Fixed
+NAME		= bsp
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Fixed
+FILES		= main Fixed Point bsp
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Fixed.hpp
+HEADER		= Fixed.hpp Point.hpp
 
 #Colors:
 RESET		:= \033[0m
@@ -38,7 +38,7 @@ BANNER = \n\
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ \n\
 ┃                CPP02                 ┃ \n\
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ \n\
-:                EX 01                 : \n\
+:                EX 03                 : \n\
 
 
 ifeq ($(DEBUG), 1)
