@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
+#    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/24 14:17:28 by arpages          ###   ########.fr        #
+#    Updated: 2024/06/24 18:29:37 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= DiamondTrap
+NAME		= Animals
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main ClapTrap ScavTrap FragTrap DiamondTrap
+FILES		= main Animal Cat Dog WrongAnimal WrongCat
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
+HEADER		= Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 
 #Colors:
 RESET		:= \033[0m
@@ -36,9 +36,9 @@ CYAN 		:= \033[1;36m
 #ascii name: big
 BANNER = \n\
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ \n\
-┃                CPP03                 ┃ \n\
+┃                CPP04                 ┃ \n\
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ \n\
-:                EX 03                 : \n\
+:                EX 00                 : \n\
 
 
 ifeq ($(DEBUG), 1)
