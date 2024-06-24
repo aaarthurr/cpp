@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 18:48:22 by arthur            #+#    #+#             */
-/*   Updated: 2024/06/23 19:07:42 by arthur           ###   ########.fr       */
+/*   Updated: 2024/06/24 14:19:54 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void    ScavTrap::attack( std::string const& target )
         std::cout << "ScavTrap " << this->_name << " is out of energy." << std::endl;
         return;
     }
-    std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage !" << std::endl;
+    std::cout << "ScavTrap " << this->_name << " attacks " << target << ", dealing " << this->_attackDamage << " damage !" << std::endl;
     this->_energyPoints -= 1;
 }
 

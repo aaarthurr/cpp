@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
+#    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/23 20:05:43 by arthur           ###   ########.fr        #
+#    Updated: 2024/06/24 14:10:15 by arpages          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ClapTrap
+NAME		= FragTrap
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98

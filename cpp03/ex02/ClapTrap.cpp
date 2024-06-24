@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 14:04:31 by arthur            #+#    #+#             */
-/*   Updated: 2024/06/23 19:50:53 by arthur           ###   ########.fr       */
+/*   Updated: 2024/06/24 14:14:56 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ClapTrap&   ClapTrap::operator=( const ClapTrap& rhs )
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap Basic destuctor called : " << this->_name << std::endl;
+	std::cout << "ClapTrap Basic destructor called : " << this->_name << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)

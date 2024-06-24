@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 14:27:40 by arthur            #+#    #+#             */
-/*   Updated: 2024/06/23 21:10:22 by arthur           ###   ########.fr       */
+/*   Updated: 2024/06/24 14:22:03 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int main( void )
 	ScavTrap 	B("\033[1;31mScav\033[0m");
 	FragTrap 	C("\033[1;34mFrag\033[0m");
 	DiamondTrap D("\033[1;36mDiamond\033[0m");
-	A.attack("Target");
 	B.guardGate();
 	C.highFive();
 	D.whoAmI();
+	D.attack("Target");
+	D.takeDamage(5);
 }

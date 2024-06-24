@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 19:45:50 by arthur            #+#    #+#             */
-/*   Updated: 2024/06/23 20:53:28 by arthur           ###   ########.fr       */
+/*   Updated: 2024/06/24 14:14:36 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ FragTrap::FragTrap( std::string name ) : ClapTrap(name)
 
 FragTrap::~FragTrap()
 {
-    std::cout << "FragTrap Basic destructor called " << this->_name  << std::endl;
+    std::cout << "FragTrap Basic destructor called : " << this->_name  << std::endl;
 }
 
 void    FragTrap::highFive( void ) {

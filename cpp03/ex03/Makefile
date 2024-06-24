@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
+#    By: arpages <arpages@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/23 21:10:35 by arthur           ###   ########.fr        #
+#    Updated: 2024/06/24 14:17:28 by arpages          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ClapTrap
+NAME		= DiamondTrap
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
@@ -38,7 +38,7 @@ BANNER = \n\
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ \n\
 ┃                CPP03                 ┃ \n\
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ \n\
-:                EX 02                 : \n\
+:                EX 03                 : \n\
 
 
 ifeq ($(DEBUG), 1)
