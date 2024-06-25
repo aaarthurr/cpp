@@ -6,11 +6,11 @@
 #    By: arthur <arthur@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/14 14:05:39 by arpages           #+#    #+#              #
-#    Updated: 2024/06/24 19:59:32 by arthur           ###   ########.fr        #
+#    Updated: 2024/06/25 15:23:23 by arthur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Animals
+NAME		= Materia
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow -g
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Animal Cat Dog WrongAnimal WrongCat Brain
+FILES		= AMateria  Character  Cure  Ice  main  MateriaSource
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+HEADER		= AMateria.hpp  Character.hpp  Cure.hpp  Ice.hpp  ICharacter.hpp  IMateriaSource.hpp  MateriaSource.hpp
 
 #Colors:
 RESET		:= \033[0m
