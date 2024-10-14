@@ -1,4 +1,4 @@
-NAME		= serializer
+NAME		= tester
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
@@ -6,12 +6,12 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Serializer
+FILES		= main Base
 
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Serializer.hpp
+HEADER		= Base.hpp
 
 #Colors:
 RESET		:= \033[0m
@@ -27,7 +27,7 @@ BANNER = \n\
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ \n\
 ┃                CPP06                 ┃ \n\
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ \n\
-:                EX 01                 : \n\
+:                EX 02                 : \n\
 
 
 ifeq ($(DEBUG), 1)

@@ -1,4 +1,4 @@
-NAME		= serializer
+NAME		= array
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
@@ -6,12 +6,12 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main Serializer
+FILES		= main
 
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Serializer.hpp
+HEADER		= easyfind.hpp
 
 #Colors:
 RESET		:= \033[0m
@@ -25,9 +25,9 @@ CYAN 		:= \033[1;36m
 #ascii name: big
 BANNER = \n\
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ \n\
-┃                CPP06                 ┃ \n\
+┃                CPP07                 ┃ \n\
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ \n\
-:                EX 01                 : \n\
+:                EX 02                 : \n\
 
 
 ifeq ($(DEBUG), 1)
