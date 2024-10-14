@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Span.hpp                                           :+:      :+:    :+:   */
+/*   MutanStack.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:44:45 by arpages           #+#    #+#             */
-/*   Updated: 2024/10/14 17:37:01 by arpages          ###   ########.fr       */
+/*   Created: 2024/10/14 17:52:58 by arpages           #+#    #+#             */
+/*   Updated: 2024/10/14 17:53:11 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,3 @@
 #define BOLD       "\e[1m"     // Gras
 #define UNDERLINE  "\e[4m"     // Surligné
 
-class Span
-{
-private:
-    unsigned int N;
-    std::vector<int> numbers;
-public:
-    Span(/* args */);
-    Span(unsigned int n);
-    Span(const Span &src);
-    Span &operator=(const Span &src);
-    ~Span();
-
-    int get_N() const;
-
-    void addNumber(int n);
-    int shortestSpan();
-    int longestSpan();
-};
