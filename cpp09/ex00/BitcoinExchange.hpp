@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/25 15:36:44 by arthur            #+#    #+#             */
-/*   Updated: 2024/10/15 11:44:44 by arpages          ###   ########.fr       */
+/*   Created: 2024/10/15 12:24:05 by arpages           #+#    #+#             */
+/*   Updated: 2024/10/15 17:57:20 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <iomanip>
-#include <limits>
-#include <cmath>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <algorithm>
+#include <stdexcept>
+#include <climits>
+#include <stack>
+#include <map>
+#include <string>
+#include <sstream> 
 
 #define RESET      "\e[0m"     // Réinitialise la couleur
 #define BLACK      "\e[30m"    // Noir
@@ -30,42 +37,21 @@
 #define BOLD       "\e[1m"     // Gras
 #define UNDERLINE  "\e[4m"     // Surligné
 
-class Bureaucrat
+class BitcoinExchange
 {
 private:
-	const std::string	_name;
-	int		_grade;
+    std::map<int, double>	data_base;
+    int max_date;
+    int min_date;
+    std::ifstream           file;
 public:
-	Bureaucrat(/* args */);
-	Bureaucrat(unsigned int grade);
-	Bureaucrat(std::string const &name);
-	Bureaucrat(std::string const &name, unsigned int grade);
-	Bureaucrat(const Bureaucrat &src);
-	
-	~Bureaucrat();
+    BitcoinExchange(/* args */);
+    ~BitcoinExchange();
 
-	Bureaucrat &operator=(const Bureaucrat &src);
-
-	void incrementGrade(void);
-	void decrementGrade(void);
-
-	int getGrade(void) const;
-	const std::string getName(void) const;
-
-	class	GradeTooHighException : public std::exception
-	{
-	public:
-		virtual const char* what() const throw() {
-			return (RED "Grade is too High !" RESET);
-		}
-	};
-	class	GradeTooLowException : public std::exception
-	{
-	public:
-		virtual const char* what() const throw() {
-			return (RED "Grade is too Low !" RESET);
-		}
-	};
+    void set_map(std::map<int, double> &data_base, std::ifstream &file);
+    void exchange();
+    double get_price(int key);
 };
 
-std::ostream&   operator<<( std::ostream& o, const Bureaucrat& rhs );
+
+int check_line(std::string str);

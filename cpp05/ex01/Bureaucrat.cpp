@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 17:57:58 by arthur            #+#    #+#             */
-/*   Updated: 2024/09/06 15:40:53 by arthur           ###   ########.fr       */
+/*   Updated: 2024/10/15 12:07:39 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 Bureaucrat::Bureaucrat(/* args */) : _name("unknown"), _grade(150)
 {
-	std::cout << "basic constructor called" << std::endl;
+	std::cout << "Created a bureaucrate named " << _name;
+	std::cout << " and have a grade of " << _grade << std::endl;
 }
 
 Bureaucrat::Bureaucrat(unsigned int grade) :  _name("unknown"), _grade(grade)
@@ -23,12 +24,14 @@ Bureaucrat::Bureaucrat(unsigned int grade) :  _name("unknown"), _grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	std::cout << "basic constructor called" << std::endl;
+	std::cout << "Created a bureaucrate named " << _name;
+	std::cout << " and have a grade of " << _grade << std::endl;
 }
 
 Bureaucrat::Bureaucrat(std::string const &name) :  _name(name), _grade(150)
 {
-	std::cout << "basic constructor called" << std::endl;
+	std::cout << "Created a bureaucrate named " << _name;
+	std::cout << " and have a grade of " << _grade << std::endl;
 }
 
 Bureaucrat::Bureaucrat(std::string const &name, unsigned int grade) :  _name(name), _grade(grade)
@@ -37,7 +40,8 @@ Bureaucrat::Bureaucrat(std::string const &name, unsigned int grade) :  _name(nam
 		throw Bureaucrat::GradeTooHighException();
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	std::cout << "basic constructor called" << std::endl;
+	std::cout << "Created a bureaucrate named " << _name;
+	std::cout << " and have a grade of " << _grade << std::endl;
 }
 
 
@@ -100,7 +104,7 @@ void	Bureaucrat::signForm(Form &form)
 		}
 		catch (Form::GradeTooLowException &e)
 		{
-			std::cerr << this->_name << " couldn't sign " << form.getName() << " because his grade is too Low" << std::endl;
+			std::cerr << this->_name << " couldn't sign " << form.getName() << " because " RED UNDERLINE "Grade is too Low" RESET << std::endl;
 		}
 	}
 }

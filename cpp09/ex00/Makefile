@@ -1,4 +1,4 @@
-NAME		= MutantStack
+NAME		= btc
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
@@ -6,12 +6,12 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main
+FILES		= main BitcoinExchange
 
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= MutantStack.hpp
+HEADER		= BitcoinExchange.hpp
 
 #Colors:
 RESET		:= \033[0m

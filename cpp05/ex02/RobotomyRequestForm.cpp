@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:18:48 by arthur            #+#    #+#             */
-/*   Updated: 2024/09/06 15:38:33 by arthur           ###   ########.fr       */
+/*   Updated: 2024/10/15 12:10:00 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ void	RobotomyRequestForm::execute(const Bureaucrat &exec) const
 	std::cout << "DRRRRRRR. DRRRRRRRRRRRR.. DRRRRRRRRR... " ;
 	if (rand() % 2 == 0)
 	{
-		std::cout << " CRACK !!!!!" << std::endl << "the robotomy failed..." << std::endl;
+		std::cout << RED " CRACK !!!!!" RESET << std::endl << "The robotomy failed..." << std::endl;
 	}
 	else
 	{
-		std::cout << " Cling !" << std::endl;
-		std::cout << exec.getName() << "has been robotomized successfully !" << std::endl;
+		std::cout << YELLOW " Cling !" RESET << std::endl;
+		std::cout << exec.getName() << " has been robotomized successfully !" << std::endl;
 	}
 	
 }

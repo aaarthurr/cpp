@@ -40,14 +40,14 @@ public:
 	{
 	public:
 		virtual const char* what() const throw() {
-			return ("Grade is too High !");
+			return (RED "Grade is too High !" RESET);
 		}
 	};
 	class	GradeTooLowException : public std::exception
 	{
 	public:
 		virtual const char* what() const throw() {
-			return ("Grade is too Low !");
+			return (RED "Grade is too Low !" RESET);
 		}
 	};
 	class	NotSignedException : public std::exception

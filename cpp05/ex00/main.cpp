@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 15:36:46 by arthur            #+#    #+#             */
-/*   Updated: 2024/09/04 15:34:50 by arthur           ###   ########.fr       */
+/*   Updated: 2024/10/15 11:48:40 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main()
 {
 	try
 	{
-		Bureaucrat	test1("test1", 1);
+		Bureaucrat	test1(GREEN "Steven" RESET, 1);
 		std::cout << test1 << std::endl;
 		test1.decrementGrade();
 		test1.decrementGrade();
@@ -33,7 +33,7 @@ int	main()
 	std::cout << "------------------------------" << std::endl;
 	try
 	{
-		Bureaucrat	test2("test2", 1236);
+		Bureaucrat	test2(BLUE "Micheal" RESET, 1236);
 	}
 	catch(std::exception& e)
 	{

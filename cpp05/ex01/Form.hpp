@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 15:45:53 by arthur            #+#    #+#             */
-/*   Updated: 2024/09/04 16:45:44 by arthur           ###   ########.fr       */
+/*   Updated: 2024/10/15 11:53:11 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ public:
 	{
 	public:
 		virtual const char* what() const throw() {
-			return ("Grade is too High !");
+			return (RED "Grade is too High !" RESET);
 		}
 	};
 	class	GradeTooLowException : public std::exception
 	{
 	public:
 		virtual const char* what() const throw() {
-			return ("Grade is too Low !");
+			return (RED "Grade is too Low !" RESET);
 		}
 	};
 	

@@ -6,7 +6,7 @@
 /*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:44:43 by arpages           #+#    #+#             */
-/*   Updated: 2024/10/14 17:49:15 by arpages          ###   ########.fr       */
+/*   Updated: 2024/10/15 11:32:32 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ Span::Span(unsigned int n) : N(n)
     std::cout << "Span created with a size of : " UNDERLINE GREEN << n << RESET << std::endl;
 }
 
-Span::Span(const Span& src) : N(src.N)
+Span::Span(const Span &src) : N(src.N)
 {
     std::cout << "Span copied with a size of : " UNDERLINE GREEN << src.N << RESET << std::endl;
 }
 
-Span& Span::operator=( const Span& rhs )
+Span& Span::operator=( const Span &rhs )
 {
 	if ( this != &rhs )
 		this->N= rhs.get_N();

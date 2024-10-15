@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthur <arthur@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arpages <arpages@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 15:36:44 by arthur            #+#    #+#             */
-/*   Updated: 2024/09/06 15:43:09 by arthur           ###   ########.fr       */
+/*   Updated: 2024/10/15 11:52:46 by arpages          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,19 @@
 #include <iomanip>
 #include <limits>
 #include <cmath>
+
+#define RESET      "\e[0m"     // Réinitialise la couleur
+#define BLACK      "\e[30m"    // Noir
+#define RED        "\e[31m"    // Rouge
+#define GREEN      "\e[32m"    // Vert
+#define YELLOW     "\e[33m"    // Jaune
+#define BLUE       "\e[34m"    // Bleu
+#define MAGENTA    "\e[35m"    // Magenta
+#define CYAN       "\e[36m"    // Cyan
+#define WHITE      "\e[37m"    // Blanc
+
+#define BOLD       "\e[1m"     // Gras
+#define UNDERLINE  "\e[4m"     // Surligné
 
 #include "Form.hpp"
 
@@ -47,14 +60,14 @@ public:
 	{
 	public:
 		virtual const char* what() const throw() {
-			return ("Grade is too High !");
+			return (RED "Grade is too High !" RESET);
 		}
 	};
 	class	GradeTooLowException : public std::exception
 	{
 	public:
 		virtual const char* what() const throw() {
-			return ("Grade is too Low !");
+			return (RED "Grade is too Low !" RESET);
 		}
 	};
 
